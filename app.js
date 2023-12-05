@@ -1,11 +1,12 @@
 const countEl = document.getElementById("count");
 const incrementBtn = document.getElementById("increment-btn");
 const saveBtn = document.getElementById("save-btn");
+const entriesEl = document.getElementById("entries");
 
 let count = 0;
 
 incrementBtn.addEventListener("click", increment);
-saveBtn.addEventListener('click', save);
+saveBtn.addEventListener("click", save);
 
 function increment() {
   count++;
@@ -13,5 +14,6 @@ function increment() {
 }
 
 function save() {
- console.log(count)
+  let entry = `${count} - `;
+  entriesEl.textContent += entry;
 }
