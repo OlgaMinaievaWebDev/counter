@@ -16,4 +16,10 @@ function increment() {
 function save() {
   let entry = `${count} - `;
   entriesEl.textContent += entry;
+  reset();
+}
+
+function reset() {
+  count = 0;
+  countEl.textContent = 0;
 }
